@@ -1,0 +1,117 @@
+* {
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+button {
+    all: unset;
+}
+
+:root {
+    --primary-clr: #3d8168;
+    --active-clr: #1a4031;
+
+
+    --bg-clr-main: #f3eae3;
+    --bg-clr-card: #ffffff;
+
+    --font-clr-primary: #1c2226;
+    --font-clr-secondary: #8d8d97;
+    --font-clr-btn: #ffffff;
+    
+    --font-sz-sm: 1rem;
+    --font-sz-md: 1.25rem;
+    --font-sz-lg: 1.75rem;
+    --font-sz-xl: 3.8rem;
+}
+
+
+main {
+    height: 100vh;
+    background-color: var(--bg-clr-main);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem 1rem;
+}
+
+
+.product-card {
+    height: 100%;
+    display: grid;
+    max-width: 900px;
+    border-radius: 1rem;
+}
+
+
+.product-image {
+    background-image: url(./images/image-product-mobile.jpg);
+    background-size: cover;
+    background-position: 0;
+    background-repeat: no-repeat;
+    border-radius: 1rem 1rem 0 0;
+}
+
+
+@media screen and (min-width: 600px) {
+    .product-card {
+        grid-template-columns: 1fr 1fr;
+        height: 70%;
+    }
+
+    .product-image {
+        background-image: url(./images/image-product-desktop.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        border-radius: 1rem 0 0 1rem;
+    }
+}
+
+
+.product-summary {
+    background-color: var(--bg-clr-card);
+    border-radius: 0 1rem 1rem 0;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+
+.heading {
+    text-transform: uppercase;
+    color: var(--font-clr-secondary);
+    letter-spacing: .5rem;
+    font-size: var(--font-sz-md);
+}
+
+.product-title {
+    font-size: var(--font-sz-xl);
+    line-height: 90%;
+}
+
+.description {
+    color: var(--font-clr-secondary);
+    font-size: var(--font-sz-md);
+    line-height: 150%;
+}
+
+.price {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.button {
+    background-color: var(--primary-clr);
+    border-radius: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    color: var(--font-clr-btn);
+    font-size: var(--font-sz-md);
+    height: 4rem;
+}
